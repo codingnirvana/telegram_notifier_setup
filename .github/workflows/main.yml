@@ -32,7 +32,8 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
+          format: markdown
           message: "Merged: #${{ github.event.pull_request.number }} - ${{github.event.pull_request.title}} - ${{github.event.pull_request.html_url}} 
-          <code>${{github.event.pull_request.body}}</code> "
+          ```${{github.event.pull_request.body}} ```"
           disable_web_page_preview: true
 
