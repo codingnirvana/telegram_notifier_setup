@@ -32,6 +32,6 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "Pull Request ${{github.event.action}}: #${{ github.event.pull_request.number }} - ${{github.event.pull_request.title}}. More info - ${{github.event.pull_request.url}}"
+          message: "Merged: #${{ github.event.pull_request.number }} - ${{github.event.pull_request.title}} - ${{github.event.pull_request.html_url}}"
           disable_web_page_preview: true
 
